@@ -1,1 +1,9 @@
-Hello World
+VS projet generation with qmake
+If qmake.exe is not found, add the path to the PATH variable with :
+	set PATH=%PATH%;C:\xxx\Qt\5.9.4\msvc2017_64\bin   xxx stands for the location where Qt is installed (in the disk C for exemple)
+Go to a location where you want to clone a github projet and clone it with (mayo for exemple):
+	git clone https://github.com/fougue/mayo.git
+To generate with qmake, do the follwing steps (mayo for exemple):
+    cd mayo
+    mkdir build && cd build
+    qmake -t vcapp ..\mayo.pro
