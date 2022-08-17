@@ -35,8 +35,8 @@ cmake --build [build directory
 
 Exemple for RL master branche :
 
-cmake -B ../build/RL_master -S rl_master -DCMAKE_TOOLCHAIN_FILE=C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_MANIFEST_MODE=ON -DVCPKG_MANIFEST_DIR=../../manifest -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=../build/LIB_RL_master -DBUILD_DEMOS=ON -DBUILD_EXTRAS=OFF -DBUILD_TESTS=OFF -G"Visual Studio 15 2017" -A x64
+cmake -B ../build/RL_master -S rl_master -DCMAKE_TOOLCHAIN_FILE=C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_MANIFEST_MODE=ON -DVCPKG_MANIFEST_DIR=../../manifest -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=../build/LIB_RL_master -DCMAKE_DEBUG_POSTFIX="d" -DBUILD_DEMOS=ON -DBUILD_EXTRAS=OFF -DBUILD_TESTS=OFF -G"Visual Studio 15 2017" -A x64
 
 cmake --build ../build/RL_master --config Release
 
-cmake --install ../build/RL_master
+cmake --install ../build/RL_master --config Release
